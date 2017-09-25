@@ -9,6 +9,18 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
     <PreferenceCategory
+        android:title="@string/general_category">
+
+    <!-- Heads up -->
+    <Preference
+        android:key="heads_up_notifications"
+        android:title="@string/heads_up_notifications"
+        android:summary="@string/heads_up_notifications_summary"
+        android:fragment="com.awaken.lab.fragments.HeadsUpSettings" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
         android:key="incall_vib_options"
         android:title="@string/incall_vibration_category" >
 
