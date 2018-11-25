@@ -7,7 +7,18 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:title="@string/statusbar_title"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
-
+    
+    <PreferenceCategory
+        android:title="@string/general_category">
+        
+        <com.awaken.support.preferences.SystemSettingSwitchPreference
+            android:key="data_disabled_icon"
+            android:title="@string/data_disabled_icon_title"
+            android:summary="@string/data_disabled_icon_summary"
+            android:defaultValue="true"/>
+            
+    </PreferenceCategory>
+    
     <PreferenceCategory
         android:key="icons_category"
         android:title="@string/statusbar_icons">
