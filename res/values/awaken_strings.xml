@@ -331,4 +331,8 @@
     <!-- Custom Fonts -->
     <string name="theme_customization_lock_clock_title">Lockscreen clock font</string>
     <string name="theme_customization_lock_clock_summary">Set LS clock font style</string>
+    
+    <!-- Power menu and dialogs opacity -->
+    <string name="power_menu_transparency">Power/reboot menu opacity</string>
+    <string name="power_menu_dialog_dim">Power/reboot dialog dim background amount</string>
 </resources>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2022 SuperiorOS
+<!-- Copyright (C) 2022 AwakenOS
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -34,5 +34,23 @@
         android:defaultValue="false" />
         
    </PreferenceCategory>
+    
+   <PreferenceCategory
+       android:title="powermenu layout">
 
+    <com.awaken.support.preferences.SystemSettingSeekBarPreference
+            android:key="transparent_power_menu"
+            android:title="@string/power_menu_transparency"
+            android:max="100"
+            android:min="0"
+            android:defaultValue="100" />
+
+    <com.awaken.support.preferences.SystemSettingSeekBarPreference
+            android:key="transparent_power_dialog_dim"
+            android:title="@string/power_menu_dialog_dim"
+            android:max="100"
+            android:min="0"
+            android:defaultValue="50" />
+
+    </PreferenceCategory>
 </PreferenceScreen>
