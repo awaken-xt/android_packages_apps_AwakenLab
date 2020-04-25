@@ -24,6 +24,11 @@
             android:summary="@string/show_fourg_icon_summary"
             android:defaultValue="true"/>
             
+        <Preference
+       	    android:key="statusbar_battery"
+            android:title="@string/battery_percent_title"
+            android:summary="@string/battery_percent_summary"
+            android:fragment="com.awaken.lab.fragments.StatusBarBatterySettings"/>
     </PreferenceCategory>
 
 </PreferenceScreen>
