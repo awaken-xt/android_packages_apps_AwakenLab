@@ -22,6 +22,7 @@
     <string name="general_category">General</string>
     <string name="volume_buttons_category">Volume Buttons</string>
     <string name="power_button_category">Power Button</string>
+    <string name="statusbar_icons">Icons</string>
 
     <!-- General strings -->
     <string name="ok">OK</string>
@@ -115,4 +116,8 @@
     <string name="double_tap_sleep_gesture_title">Tap to sleep</string>
     <string name="double_tap_sleep_gesture_summary">Double-tap anywhere on the status bar to put the device to sleep</string>
 
+    <!-- Status bar Icon Manager -->
+    <string name="icon_manager_title">Status Bar Icons</string>
+    <string name="icon_manager_summary">Tune Statusbar Items</string>
+    
 </resources>
