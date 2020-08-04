@@ -10,6 +10,12 @@
     
     <PreferenceCategory
         android:title="@string/general_category">
+
+        <Preference
+            android:key="ambient_customization"
+            android:title="@string/ambient_text_category_title"
+            android:summary="@string/ambient_text_category_summary"
+            android:fragment="com.awaken.lab.fragments.AmbientCustomizations" />
         
         <com.awaken.support.preferences.SecureSettingSwitchPreference
             android:key="window_ignore_secure"
