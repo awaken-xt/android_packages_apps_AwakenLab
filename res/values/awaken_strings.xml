@@ -23,6 +23,7 @@
     <string name="volume_buttons_category">Volume Buttons</string>
     <string name="power_button_category">Power Button</string>
     <string name="statusbar_icons">Icons</string>
+    <string name="qs_show_brightness_slider_title">Brightness slider</string>
 
     <!-- General strings -->
     <string name="ok">OK</string>
@@ -119,5 +120,12 @@
     <!-- Status bar Icon Manager -->
     <string name="icon_manager_title">Status Bar Icons</string>
     <string name="icon_manager_summary">Tune Statusbar Items</string>
-    
+
+    <!-- Brightness slider -->
+    <string name="qs_show_brightness_title">Brightness slider</string>
+    <string name="qs_show_brightness_summary">Brightness slider visibility and settings</string>
+    <string name="qs_brightness_position_bottom_title">Bottom brightness slider</string>
+    <string name="qs_brightness_position_bottom_summary">Show the brightness slider on the bottom of QS</string>
+    <string name="qs_show_auto_brightness_title">Auto brightness icon</string>
+    <string name="qs_show_auto_brightness_summary">Show an auto brightness toggle near the brightness slider</string>
 </resources>
