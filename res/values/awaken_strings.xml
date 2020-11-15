@@ -138,8 +138,13 @@
     <string name="haptic_on_slider_title">Volume Haptic feedback</string>
     <string name="haptic_on_slider_summary">Haptic feedback when adjusting volume (Requires touch feedback to be enabled)</string>
     
-    !-- Status bar Icon Manager -->
+    <!-- Status bar Icon Manager -->
     <string name="icon_manager_title">Status Bar Icons</string>
     <string name="icon_manager_summary">Tune Statusbar Items</string>
-    
+
+    <!-- Lockscreen media art -->
+    <string name="lockscreen_media_art_category_title">Media art</string>
+    <string name="keygaurd_media_art_title">Display media cover art</string>
+    <string name="keygaurd_media_art_summary">Show current playing media\'s album art on lockscreen</string>
+    <string name="lockscreen_media_blur_title">Media art blur level</string>
 </resources>
