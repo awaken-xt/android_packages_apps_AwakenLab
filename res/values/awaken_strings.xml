@@ -142,6 +142,12 @@
     <string name="icon_manager_title">Status Bar Icons</string>
     <string name="icon_manager_summary">Tune Statusbar Items</string>
 
+    <!-- Incall vibrate options -->
+    <string name="incall_vibration_category">In-call vibration</string>
+    <string name="incall_vibrate_connect_title">Vibrate on connect</string>
+    <string name="incall_vibrate_call_wait_title">Vibrate on call waiting</string>
+    <string name="incall_vibrate_disconnect_title">Vibrate on disconnect</string>
+
     <!-- Lockscreen media art -->
     <string name="lockscreen_media_art_category_title">Media art</string>
     <string name="keygaurd_media_art_title">Display media cover art</string>
