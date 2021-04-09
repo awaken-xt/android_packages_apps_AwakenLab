@@ -9,56 +9,56 @@
     android:title="@string/awakenlab_title" >
 
         <!-- Theme Room -->
-        <Preference
+        <com.awaken.lab.preferences.AwakenPreference
             android:key="theme_category"
             android:title="@string/theme_title"
             android:fragment="com.awaken.lab.categories.ThemeSettings"
             android:icon="@drawable/ic_settings_theme"/>
         
         <!-- Status Bar -->
-        <Preference
+        <com.awaken.lab.preferences.AwakenPreference
             android:key="statusbar_category"
             android:title="@string/statusbar_title"
             android:fragment="com.awaken.lab.categories.StatusBarSettings" 
             android:icon="@drawable/ic_settings_statusbar"/>
 
         <!-- Quick Settings panel -->
-        <Preference
+        <com.awaken.lab.preferences.AwakenPreference
             android:key="quicksettings_category"
             android:title="@string/quicksettings_title"
             android:fragment="com.awaken.lab.categories.QuickSettings"
             android:icon="@drawable/ic_settings_quicksettings"/>
 
         <!-- Buttons -->
-        <Preference
+        <com.awaken.lab.preferences.AwakenPreference
             android:key="buttonsettings_category"
             android:title="@string/button_title"
             android:fragment="com.awaken.lab.categories.ButtonSettings"
             android:icon="@drawable/ic_settings_buttons"/>
 
         <!-- Gestures -->
-        <Preference
+        <com.awaken.lab.preferences.AwakenPreference
             android:key="gestures_category"
             android:title="@string/gestures_title" 
             android:fragment="com.awaken.lab.categories.GestureSettings"
             android:icon="@drawable/ic_settings_gestures"/>
 
         <!-- Lock Screen -->
-        <Preference
+        <com.awaken.lab.preferences.AwakenPreference
             android:key="lockscreen_category"
             android:title="@string/lockscreen_title" 
             android:fragment="com.awaken.lab.categories.LockScreenSettings"
             android:icon="@drawable/ic_settings_lockscreens"/>
 
         <!-- Notifications -->
-        <Preference
+        <com.awaken.lab.preferences.AwakenPreference
             android:key="notifications_category"
             android:title="@string/notifications_title"
             android:fragment="com.awaken.lab.categories.NotificationSettings"
             android:icon="@drawable/ic_settings_notifications"/>
         
         <!-- Misc -->
-        <Preference
+        <com.awaken.lab.preferences.AwakenPreference
             android:key="misc_category"
             android:title="@string/misc_title" 
             android:fragment="com.awaken.lab.categories.MiscSettings"
