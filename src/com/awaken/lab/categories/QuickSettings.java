@@ -47,6 +47,8 @@ public class QuickSettings extends SettingsPreferenceFragment implements
         OnPreferenceChangeListener {
     private static final String BRIGHTNESS_SLIDER = "qs_show_brightness";
     
+    private ListPreference mQuickPulldown;
+    
     private SecureSettingMasterSwitchPreference mBrightnessSlider;
 
     @Override
@@ -64,6 +66,13 @@ public class QuickSettings extends SettingsPreferenceFragment implements
         boolean enabled = Settings.Secure.getInt(resolver,
                 BRIGHTNESS_SLIDER, 1) == 1;
         mBrightnessSlider.setChecked(enabled);
+        
+        int qpmode = Settings.System.getIntForUser(getContentResolver(),
+                Settings.System.STATUS_BAR_QUICK_QS_PULLDOWN, 0, UserHandle.USER_CURRENT);
+        mQuickPulldown = (ListPreference) findPreference("qs_quick_pulldown");
+        mQuickPulldown.setValue(String.valueOf(qpmode));
+        mQuickPulldown.setSummary(mQuickPulldown.getEntry());
+        mQuickPulldown.setOnPreferenceChangeListener(this);
     }
 
     @Override
@@ -73,6 +82,16 @@ public class QuickSettings extends SettingsPreferenceFragment implements
             boolean value = (boolean) newValue;
             Settings.Secure.putInt(resolver,
                     BRIGHTNESS_SLIDER, value ? 1 : 0);
+            return true;
+        }
+        if (preference == mQuickPulldown) {
+            int value = Integer.parseInt((String) newValue);
+            Settings.System.putIntForUser(resolver,
+                    Settings.System.STATUS_BAR_QUICK_QS_PULLDOWN, value,
+                    UserHandle.USER_CURRENT);
+            int index = mQuickPulldown.findIndexOfValue((String) newValue);
+            mQuickPulldown.setSummary(
+                    mQuickPulldown.getEntries()[index]);
             return true;
         }
         return false;
