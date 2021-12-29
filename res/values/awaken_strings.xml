@@ -35,6 +35,7 @@
     <string name="power_button_category">Power Button/Menu</string>
     <string name="ambient_display_category">Ambient display</string>
     <string name="monet_category">Monet Customization</string>
+    <string name="statusbar_icons">Icons</string>
 
     <!-- Custom seekbar -->
     <string name="custom_seekbar_value">Value: <xliff:g id="v">%s</xliff:g></string>
@@ -758,5 +759,8 @@
     <!-- Ambient Ticker -->
     <string name="pulse_on_new_tracks_title">Music ticker</string>
     <string name="pulse_on_new_tracks_summary">Show music ticker on Ambient Display during track change</string>
-    
+
+     <!-- Statusbar Tuner -->
+     <string name="statusbar_items_title">Statusbar items</string>
+     <string name="statusbar_items_summary">Tune Statusbar items</string>
 </resources>
