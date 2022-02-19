@@ -202,4 +202,7 @@
     <string name="theme_customization_wifi_icon_summary">Set custom wifi icon style</string>
     <!-- [CHAR_LIMIT=NONE] Developer Settings: Label for the option that turns off customizations for a given category.-->
     <string name="theme_customization_device_default">Device default</string>
+    <!-- Custom Navigation bar -->
+    <string name="theme_customization_navbar_title">Navbar style</string>
+    <string name="theme_customization_navbar_summary">Set custom navigation bar style</string>
 </resources>
