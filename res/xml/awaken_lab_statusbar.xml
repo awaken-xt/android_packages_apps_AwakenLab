@@ -9,6 +9,18 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
     <PreferenceCategory
+        android:key="icons_category"
+        android:title="@string/statusbar_icons">
+
+        <Preference
+            android:key="sbbatteryicons"
+            android:title="@string/status_bar_battery_style_title"
+            android:summary="@string/status_bar_battery_style_summary"
+            android:fragment="com.awaken.lab.fragments.BatteryStyleSettings" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
         android:title="@string/status_bar_clock_title">
 
         <com.awaken.support.preferences.SystemSettingListPreference
