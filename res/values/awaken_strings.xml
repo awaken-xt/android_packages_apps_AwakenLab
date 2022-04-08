@@ -20,6 +20,7 @@
     
     <!-- Sub category -->
     <string name="general_category">General</string>
+    <string name="volume_buttons_category">Volume Buttons</string>
 
     <!-- General strings -->
     <string name="ok">OK</string>
@@ -83,5 +84,9 @@
     <string name="heads_up_snooze_10min">10 minutes</string>
     <string name="heads_up_snooze_15min">15 minutes</string>
     <string name="heads_up_snooze_20min">20 minutes</string>
+    
+    <!-- Volume button music control -->
+    <string name="volume_button_music_control_title">Playback control</string>
+    <string name="volume_button_music_control_summary">When the screen is off, long-pressing volume keys will skip music tracks</string>
     
 </resources>
