@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-    Copyright (C) 2022 SuperiorOS
+    Copyright (C) 2022 awakenOS
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -55,6 +55,28 @@
         android:summary="@string/reticker_colored_summary"
         android:order="10"
         android:defaultValue="false" />
+        
+    <com.awaken.support.preferences.SystemSettingSwitchPreference
+        android:key="notification_material_dismiss"
+        android:title="@string/notification_material_dismiss_title"
+        android:summary="@string/notification_material_dismiss_summary"
+        android:defaultValue="false" />
+
+    <com.awaken.support.preferences.SystemSettingSeekBarPreference
+        android:key="notification_material_dismiss_style"
+        android:title="@string/notification_material_dismiss_style_title"
+        android:dependency="notification_material_dismiss"
+        android:defaultValue="0"
+        android:max="9"
+        android:min="0" />
+
+    <com.awaken.support.preferences.SystemSettingSeekBarPreference
+        android:key="notification_material_dismiss_bgstyle"
+        android:title="@string/notification_material_dismiss_bgstyle_title"
+        android:dependency="notification_material_dismiss"
+        android:defaultValue="0"
+        android:max="4"
+        android:min="0" />
             
     </PreferenceCategory>
     
