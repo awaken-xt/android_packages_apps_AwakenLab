@@ -17,5 +17,16 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:title="@string/misc_title"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
-
+    
+    <PreferenceCategory
+        android:title="@string/general_category">
+        
+        <com.awaken.support.preferences.SecureSettingSwitchPreference
+            android:key="window_ignore_secure"
+            android:title="@string/ignore_window_secure_title"
+            android:summary="@string/ignore_window_secure_summary"
+            android:defaultValue="false"/>
+            
+    
+   </PreferenceCategory>
 </PreferenceScreen>
