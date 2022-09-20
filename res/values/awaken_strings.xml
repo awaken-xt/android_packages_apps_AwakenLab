@@ -208,5 +208,4 @@
     <!-- Separate signal icons -->
     <string name="separate_signal_icons_title">Separate signal icons</string>
     <string name="separate_signal_icons_summary">Show signal and WiFi separately\nRequires a SystemUI restart</string>
-    
 </resources>
