@@ -257,4 +257,8 @@
     <string name="chroma_factor_summary">Higher values produce stronger colors</string>
     <string name="tint_background_title">Tint Background</string>
     <string name="tint_background_summary">Make Luminance and Chroma selection affect background colors as well</string>
+    
+    <!-- QS Dual Tone Colors -->
+    <string name="qs_dual_tone_title">QS dual tone</string>
+    <string name="qs_dual_tone_summary">Use dual tone background colors</string>
 </resources>
