@@ -56,6 +56,13 @@
             android:title="@string/data_disabled_icon_title"
             android:summary="@string/data_disabled_icon_summary"
             android:defaultValue="true"/>
+            
+        <!-- Separate signal icons -->
+        <com.awaken.support.preferences.OverlaySwitchPreference
+            android:key="com.android.systemui.flags.no_combined_icons"
+            android:title="@string/separate_signal_icons_title"
+            android:summary="@string/separate_signal_icons_summary"
+            android:defaultValue="false" />
     </PreferenceCategory>
 
 </PreferenceScreen>
