@@ -41,6 +41,7 @@ import android.view.View;
 import java.util.List;
 import java.util.ArrayList;
 
+import com.awaken.support.preferences.SystemSettingListPreference;
 import com.awaken.support.preferences.SecureSettingMasterSwitchPreference;
 
 public class QuickSettings extends SettingsPreferenceFragment implements
@@ -50,6 +51,10 @@ public class QuickSettings extends SettingsPreferenceFragment implements
     private ListPreference mQuickPulldown;
     
     private SecureSettingMasterSwitchPreference mBrightnessSlider;
+
+    private static final String QS_PAGE_TRANSITIONS = "custom_transitions_page_tile";
+
+    private SystemSettingListPreference mPageTransitions;
 
     @Override
     public void onCreate(Bundle icicle) {
@@ -73,6 +78,15 @@ public class QuickSettings extends SettingsPreferenceFragment implements
         mQuickPulldown.setValue(String.valueOf(qpmode));
         mQuickPulldown.setSummary(mQuickPulldown.getEntry());
         mQuickPulldown.setOnPreferenceChangeListener(this);
+
+        mPageTransitions = (SystemSettingListPreference) findPreference(QS_PAGE_TRANSITIONS);
+        mPageTransitions.setOnPreferenceChangeListener(this);
+        int customTransitions = Settings.System.getIntForUser(resolver,
+                Settings.System.CUSTOM_TRANSITIONS_KEY,
+                0, UserHandle.USER_CURRENT);
+        mPageTransitions.setValue(String.valueOf(customTransitions));
+        mPageTransitions.setSummary(mPageTransitions.getEntry());
+
     }
 
     @Override
@@ -93,7 +107,15 @@ public class QuickSettings extends SettingsPreferenceFragment implements
             mQuickPulldown.setSummary(
                     mQuickPulldown.getEntries()[index]);
             return true;
-        }
+        } else if (preference.equals(mPageTransitions)) {
+            int customTransitions = Integer.parseInt(((String) newValue).toString());
+            Settings.System.putIntForUser(resolver,
+                    Settings.System.CUSTOM_TRANSITIONS_KEY, customTransitions, UserHandle.USER_CURRENT);
+            int index = mPageTransitions.findIndexOfValue((String) newValue);
+            mPageTransitions.setSummary(
+                    mPageTransitions.getEntries()[index]);
+            return true;
+          } 
         return false;
 
         }
