@@ -70,5 +70,29 @@
             android:summary="@string/battery_percent_summary"
             android:fragment="com.awaken.lab.fragments.StatusBarBatterySettings"/>
     </PreferenceCategory>
+    
+    <PreferenceCategory
+        android:key="clocksettings_category"
+        android:title="@string/clocksettings_category_title">
+
+        <!-- Clock Customizations -->
+        <com.awaken.support.preferences.SecureSettingListPreference
+            android:key="status_bar_clock_position"
+            android:title="@string/status_bar_clock_position_title"
+            android:summary="%s"
+            android:dialogTitle="@string/status_bar_clock_position_title"
+            android:entries="@array/status_bar_clock_position_entries"
+            android:entryValues="@array/status_bar_clock_position_values"
+            android:defaultValue="0" />
+
+        <com.awaken.support.preferences.SecureSettingListPreference
+            android:key="status_bar_am_pm"
+            android:title="@string/status_bar_am_pm_title"
+            android:summary="%s"
+            android:dialogTitle="@string/status_bar_am_pm_title"
+            android:entries="@array/status_bar_am_pm_entries"
+            android:entryValues="@array/status_bar_am_pm_values"
+            android:defaultValue="2" />
+    </PreferenceCategory>
 
 </PreferenceScreen>
