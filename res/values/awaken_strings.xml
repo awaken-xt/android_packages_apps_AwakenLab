@@ -33,6 +33,7 @@
     <string name="general_category">General</string>
     <string name="volume_buttons_category">Volume Buttons</string>
     <string name="power_button_category">Power Button/Menu</string>
+    <string name="ambient_display_category">Ambient display</string>
 
     <!-- Custom seekbar -->
     <string name="custom_seekbar_value">Value: <xliff:g id="v">%s</xliff:g></string>
@@ -363,4 +364,9 @@
     <string name="qs_transitions_zoom_in">Zoom in</string>
     <string name="qs_transitions_zoom_out">Zoom out</string>
     <string name="qs_transitions_zoom_out_slide">Zoom out slide</string>
+    
+    <!-- Ambient Wake gesture -->
+    <string name="ambient_wake_gestures_title">Ambient wake gestures</string>
+    <string name="ambient_wake_gestures_summary">Show Ambient Display instead of normal locksreen on wake gestures</string>
+    
 </resources>
