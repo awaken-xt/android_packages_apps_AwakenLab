@@ -327,4 +327,8 @@
     <string name="notification_material_dismiss_summary">Replace clear all notification text with material style floating button</string>
     <string name="notification_material_dismiss_style_title">Button style</string>
     <string name="notification_material_dismiss_bgstyle_title">Button background</string>
+    
+    <!-- Custom Fonts -->
+    <string name="theme_customization_lock_clock_title">Lockscreen clock font</string>
+    <string name="theme_customization_lock_clock_summary">Set LS clock font style</string>
 </resources>
