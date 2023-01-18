@@ -19,17 +19,37 @@ package com.awaken.lab.fragments;
 import com.android.internal.logging.nano.MetricsProto;
 
 import android.os.Bundle;
+import android.content.Context;
 import com.android.settings.R;
+
+import androidx.preference.Preference;
+import androidx.preference.PreferenceScreen;
 
 import com.android.settings.SettingsPreferenceFragment;
 
 public class NotificationSettings extends SettingsPreferenceFragment {
+
+    private static final String KEY_BATTERY_CHARGING_LIGHT = "battery_charging_light";
+    
+    Preference mBatteryLightPref;
+    PreferenceScreen prefSet;
 
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
 
         addPreferencesFromResource(R.xml.awaken_lab_notifications);
+        
+        mBatteryLightPref = (Preference) findPreference(KEY_BATTERY_CHARGING_LIGHT);
+        prefSet = getPreferenceScreen();
+        if (!getResources()
+                .getBoolean(com.android.internal.R.bool.config_intrusiveBatteryLed))
+        {
+			if (mBatteryLightPref != null) {
+				prefSet.removePreference(mBatteryLightPref);
+			}
+        }
+
     }
 
     @Override
