@@ -46,5 +46,32 @@
             android:defaultValue="true" />
 
     </PreferenceCategory>
+    
+    <PreferenceCategory
+        android:title="@string/light_settings_header" >
+
+        <com.awaken.support.preferences.SystemSettingSwitchPreference
+            android:key="battery_light_enabled"
+            android:title="@string/battery_light_enable"
+            android:defaultValue="true"/>
+
+        <com.awaken.support.preferences.SystemSettingSwitchPreference
+            android:key="battery_full_light_enabled"
+            android:title="@string/battery_full_light_enabled"
+            android:defaultValue="true" />
+
+        <com.awaken.support.preferences.SystemSettingSwitchPreference
+            android:key="battery_light_allow_on_dnd"
+            android:title="@string/battery_light_allow_on_dnd_title"
+            android:dependency="battery_light_enabled"
+            android:defaultValue="false" />
+
+        <com.awaken.support.preferences.SystemSettingSwitchPreference
+            android:key="battery_light_low_blinking"
+            android:title="@string/battery_light_low_blinking_title"
+            android:dependency="battery_light_enabled"
+            android:defaultValue="false" />
+
+    </PreferenceCategory>
 
 </PreferenceScreen>
