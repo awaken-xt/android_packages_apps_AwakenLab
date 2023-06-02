@@ -19,13 +19,19 @@
         xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
      <PreferenceCategory
-        android:title="@string/general_category">
+        android:title="@string/volume_panel">
 
      <com.awaken.support.preferences.SystemSettingSwitchPreference
         android:key="volbtn_music_controls"
         android:title="@string/volume_button_music_control_title"
         android:summary="@string/volume_button_music_control_summary"
         android:defaultValue="false" />
+        
+    <com.awaken.support.preferences.SystemSettingSwitchPreference
+            android:key="haptic_on_slider"
+            android:title="@string/haptic_on_slider_title"
+            android:summary="@string/haptic_on_slider_summary"
+            android:defaultValue="true" />
 
     </PreferenceCategory>
 </PreferenceScreen>
