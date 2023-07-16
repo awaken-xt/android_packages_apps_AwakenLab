@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2022 SuperiorOS
+ * Copyright (C) 2022 OS
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.superior.lab.fragments;
+package com.awaken.lab.fragments;
 
 import com.android.internal.logging.nano.MetricsProto;
 
@@ -29,12 +29,12 @@ public class GestureSettings extends SettingsPreferenceFragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        addPreferencesFromResource(R.xml.superior_lab_gestures);
+        addPreferencesFromResource(R.xml.awaken_lab_gestures);
     }
 
     @Override
     public int getMetricsCategory() {
-        return MetricsProto.MetricsEvent.SUPERIOR;
+        return MetricsProto.MetricsEvent.awaken;
     }
 
 }

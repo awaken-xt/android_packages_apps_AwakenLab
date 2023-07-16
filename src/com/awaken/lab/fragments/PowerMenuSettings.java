@@ -14,64 +14,57 @@
  * limitations under the License.
  */
 
-package com.superior.lab.fragments;
+package com.awaken.lab.fragments;
 
-import com.android.internal.logging.nano.MetricsProto;
-
-import android.os.Bundle;
-import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.content.pm.ResolveInfo;
-import android.os.UserHandle;
+import android.content.Context;
 import android.content.ContentResolver;
-import android.content.res.Resources;
+import android.content.Intent;
+import android.content.pm.UserInfo;
+import android.os.Bundle;
+import android.os.UserHandle;
+import android.os.UserManager;
 import androidx.preference.ListPreference;
 import androidx.preference.Preference;
-import androidx.preference.PreferenceGroup;
-import androidx.preference.PreferenceScreen;
 import androidx.preference.PreferenceCategory;
+import androidx.preference.PreferenceScreen;
 import androidx.preference.Preference.OnPreferenceChangeListener;
-import androidx.preference.PreferenceFragment;
 import androidx.preference.SwitchPreference;
 import android.provider.Settings;
 import com.android.settings.R;
+import androidx.annotation.NonNull;
 
-import java.util.Locale;
-import android.text.TextUtils;
-import android.view.View;
-
+import com.android.internal.logging.nano.MetricsProto;
 import com.android.settings.SettingsPreferenceFragment;
-import com.android.settings.Utils;
-import android.util.Log;
 
-import java.util.List;
+import java.util.Arrays;
 import java.util.ArrayList;
-import java.util.Map;
-import java.util.HashMap;
-import java.util.Collections;
+import java.util.List;
 
-public class StatusBarSettings extends SettingsPreferenceFragment implements
-        OnPreferenceChangeListener {
+
+public class PowerMenuSettings extends SettingsPreferenceFragment
+                implements Preference.OnPreferenceChangeListener {
+
 
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
 
-        addPreferencesFromResource(R.xml.superior_lab_statusbar);
+        addPreferencesFromResource(R.xml.awaken_lab_power);
 
-        PreferenceScreen prefSet = getPreferenceScreen();
+        final ContentResolver resolver = getActivity().getContentResolver();
+        final PreferenceScreen prefScreen = getPreferenceScreen();
 
     }
 
     @Override
-    public boolean onPreferenceChange(Preference preference, Object objValue) {
+    public boolean onPreferenceChange(Preference preference, Object newValue) {
 
         return false;
     }
 
     @Override
     public int getMetricsCategory() {
-        return MetricsProto.MetricsEvent.SUPERIOR;
+        return MetricsProto.MetricsEvent.awaken;
     }
 
 }

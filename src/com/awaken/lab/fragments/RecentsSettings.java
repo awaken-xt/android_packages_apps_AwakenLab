@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2022 SuperiorOS
+ * Copyright (C) 2022 awakenOS
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,57 +14,51 @@
  * limitations under the License.
  */
 
-package com.superior.lab.fragments;
+package com.awaken.lab.fragments;
 
+import com.android.internal.logging.nano.MetricsProto;
+import android.app.Activity;
 import android.content.Context;
 import android.content.ContentResolver;
-import android.content.Intent;
-import android.content.pm.UserInfo;
+import android.content.res.Resources;
 import android.os.Bundle;
+import android.os.SystemProperties;
 import android.os.UserHandle;
-import android.os.UserManager;
 import androidx.preference.ListPreference;
 import androidx.preference.Preference;
-import androidx.preference.PreferenceCategory;
 import androidx.preference.PreferenceScreen;
 import androidx.preference.Preference.OnPreferenceChangeListener;
 import androidx.preference.SwitchPreference;
 import android.provider.Settings;
 import com.android.settings.R;
-import androidx.annotation.NonNull;
-
-import com.android.internal.logging.nano.MetricsProto;
-import com.android.settings.SettingsPreferenceFragment;
 
 import java.util.Arrays;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashSet;
 
+import com.android.settings.SettingsPreferenceFragment;
 
-public class PowerMenuSettings extends SettingsPreferenceFragment
-                implements Preference.OnPreferenceChangeListener {
-
+public class RecentsSettings extends SettingsPreferenceFragment implements
+        OnPreferenceChangeListener {
 
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
 
-        addPreferencesFromResource(R.xml.superior_lab_power);
+        addPreferencesFromResource(R.xml.awaken_lab_recents);
 
-        final ContentResolver resolver = getActivity().getContentResolver();
-        final PreferenceScreen prefScreen = getPreferenceScreen();
+        ContentResolver resolver = getActivity().getContentResolver();
 
     }
 
     @Override
-    public boolean onPreferenceChange(Preference preference, Object newValue) {
+    public boolean onPreferenceChange(Preference preference, Object objValue) {
 
-        return false;
+    return false;
+
     }
 
     @Override
     public int getMetricsCategory() {
-        return MetricsProto.MetricsEvent.SUPERIOR;
+        return MetricsProto.MetricsEvent.awaken;
     }
-
 }

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.superior.lab;
+package com.awaken.lab;
 
 import com.android.internal.logging.nano.MetricsProto;
 
@@ -28,18 +28,18 @@ import com.android.settings.R;
 
 import com.android.settings.SettingsPreferenceFragment;
 
-public class SuperiorLab extends SettingsPreferenceFragment {
+public class awakenLab extends SettingsPreferenceFragment {
 
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
 
-        addPreferencesFromResource(R.xml.superior_lab);
+        addPreferencesFromResource(R.xml.awaken_lab);
     }
 
     @Override
     public int getMetricsCategory() {
-        return MetricsProto.MetricsEvent.SUPERIOR;
+        return MetricsProto.MetricsEvent.awaken;
     }
 
     public static void lockCurrentOrientation(Activity activity) {

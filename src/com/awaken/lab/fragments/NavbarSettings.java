@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2022 SuperiorOS
+ * Copyright (C) 2022 awakenOS
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.superior.lab.fragments;
+package com.awaken.lab.fragments;
 
 import java.util.ArrayList;
 
@@ -42,7 +42,7 @@ public class NavbarSettings extends SettingsPreferenceFragment implements OnPref
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
-        addPreferencesFromResource(R.xml.superior_lab_navigation);
+        addPreferencesFromResource(R.xml.awaken_lab_navigation);
 
     }
 
@@ -54,6 +54,6 @@ public class NavbarSettings extends SettingsPreferenceFragment implements OnPref
 
     @Override
     public int getMetricsCategory() {
-        return MetricsProto.MetricsEvent.SUPERIOR;
+        return MetricsProto.MetricsEvent.awaken;
     }
 }

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2022 awakenOS
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources>
+    <!-- Text Styles -->
+    <style name="awakenTextPrimary">
+        <item name="android:textSize">19sp</item>
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+        <item name="android:fontFamily">@*android:string/config_headlineFontFamily</item>
+    </style>
+
+    <style name="awakenTextPrimaryMedium" parent="awakenTextPrimary">
+        <item name="android:fontFamily">@*android:string/config_headlineFontFamilyMedium</item>
+    </style>
+
+    <style name="awakenTextSecondary">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">?android:attr/textColorSecondary</item>
+    </style>
+
+    <!-- Dashboard -->
+    <style name="awakenDashboardPreferenceSingle" parent="awakenPreferenceBase">
+        <item name="android:layout_marginBottom">0dp</item>
+    </style>
+    <style name="awakenDashboardPreferenceTop" parent="awakenPreferenceTop">
+        <item name="android:layout_marginTop">@dimen/awaken_pref_horizontal_padding</item>
+    </style>
+
+    <style name="awakenDashboardPreferenceBottom" parent="awakenPreferenceBottom">
+        <item name="android:layout_marginBottom">0dp</item>
+    </style>
+
+    <style name="awakenDashboardPreferenceFull" parent="awakenPreferenceFull">
+        <item name="android:layout_marginTop">@dimen/awaken_pref_horizontal_padding</item>
+        <item name="android:layout_marginBottom">4dp</item>
+    </style>
+
+    <style name="awakenDashboardPreferenceFullAccent" parent="awakenDashboardPreferenceFull">
+        <item name="android:background">@drawable/awaken_preference_background_full_accent</item>
+    </style>
+
+    <style name="awakenDashboardPreferencePhone" parent="awakenDashboardPreferenceTop">
+        <item name="android:background">@drawable/awaken_preference_background_phone</item>
+    </style>
+
+    <!-- General -->
+    <style name="awakenPreferenceBase">
+        <item name="android:layout_marginStart">@dimen/awaken_pref_horizontal_padding</item>
+        <item name="android:layout_marginEnd">@dimen/awaken_pref_horizontal_padding</item>
+        <item name="android:clipToPadding">false</item>
+    </style>
+
+    <style name="awakenPreferenceTop" parent="awakenPreferenceBase">
+        <item name="android:layout_marginBottom">2dp</item>
+        <item name="android:layout_marginTop">4dp</item>
+        <item name="android:background">@drawable/awaken_preference_background_top</item>
+    </style>
+
+    <style name="awakenPreferenceMiddle" parent="awakenPreferenceBase">
+        <item name="android:layout_marginBottom">2dp</item>
+        <item name="android:background">@drawable/awaken_preference_background_middle</item>
+    </style>
+
+    <style name="awakenPreferenceBottom" parent="awakenPreferenceBase">
+        <item name="android:layout_marginBottom">4dp</item>
+        <item name="android:background">@drawable/awaken_preference_background_bottom</item>
+    </style>
+
+    <style name="awakenPreferenceFull" parent="awakenPreferenceBase">
+        <item name="android:layout_marginTop">4dp</item>
+        <item name="android:layout_marginBottom">4dp</item>
+        <item name="android:background">@drawable/awaken_preference_background_full</item>
+    </style>
+
+    <style name="awakenPreferenceFullAccent" parent="awakenPreferenceBase">
+        <item name="android:layout_marginTop">@dimen/awaken_pref_horizontal_padding</item>
+        <item name="android:layout_marginBottom">4dp</item>
+        <item name="android:background">@drawable/awaken_preference_background_full_accent</item>
+    </style>
+</resources>

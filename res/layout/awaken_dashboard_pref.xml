@@ -57,7 +57,7 @@
             android:layout_height="wrap_content"
             android:ellipsize="marquee"
             android:singleLine="true"
-            style="@style/superiorTextPrimaryMedium" />
+            style="@style/awakenTextPrimaryMedium" />
 
         <TextView
             android:id="@android:id/summary"
@@ -67,7 +67,7 @@
             android:layout_alignStart="@android:id/title"
             android:layout_marginTop="4dp"
             android:singleLine="true"
-            style="@style/superiorTextSecondary" />
+            style="@style/awakenTextSecondary" />
 
     </RelativeLayout>
 
@@ -81,7 +81,7 @@
         <androidx.cardview.widget.CardView
             android:layout_width="28dp"
             android:layout_height="28dp"
-            app:cardBackgroundColor="@color/superior_background1"
+            app:cardBackgroundColor="@color/awaken_background1"
             app:cardElevation="0dp"
             app:cardCornerRadius="99dp">
 
@@ -89,7 +89,7 @@
                     android:layout_width="24dp"
                     android:layout_height="24dp"
                     android:layout_gravity="center"
-                    android:src="@drawable/superior_chevron_right"
+                    android:src="@drawable/awaken_chevron_right"
                     android:tint="?android:attr/textColorPrimary" />    
 
         </androidx.cardview.widget.CardView>

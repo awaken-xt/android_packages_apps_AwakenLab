@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.superior.lab.fragments;
+package com.awaken.lab.fragments;
 
 import com.android.internal.logging.nano.MetricsProto;
 
@@ -29,11 +29,11 @@ public class NotificationSettings extends SettingsPreferenceFragment {
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
 
-        addPreferencesFromResource(R.xml.superior_lab_notifications);
+        addPreferencesFromResource(R.xml.awaken_lab_notifications);
     }
 
     @Override
     public int getMetricsCategory() {
-        return MetricsProto.MetricsEvent.SUPERIOR;
+        return MetricsProto.MetricsEvent.awaken;
     }
 }

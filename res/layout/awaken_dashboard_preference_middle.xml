@@ -16,12 +16,12 @@
 -->
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/container"
-    style="@style/superiorPreferenceMiddle"
+    style="@style/awakenPreferenceMiddle"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
     <include
-        layout="@layout/superior_dashboard_pref"
+        layout="@layout/awaken_dashboard_pref"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 

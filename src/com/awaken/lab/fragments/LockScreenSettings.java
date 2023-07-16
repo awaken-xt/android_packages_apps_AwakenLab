@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2016 The Dirty Unicorns Project
+ *  Copyright (C) 2022 awakenOS
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -15,38 +15,41 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *
  */
-
-package com.superior.lab.fragments;
-
-import android.content.ContentResolver;
-import android.content.res.Resources;
-import android.content.Context;
-import android.os.Bundle;
-import android.os.UserHandle;
-import android.os.Vibrator;
-import androidx.preference.PreferenceCategory;
-import androidx.preference.ListPreference;
-import androidx.preference.Preference;
-import androidx.preference.PreferenceScreen;
-import androidx.preference.Preference.OnPreferenceChangeListener;
-import androidx.preference.SwitchPreference;
-import android.provider.Settings;
-
-import com.android.settings.R;
-
-import com.android.settings.SettingsPreferenceFragment;
+package com.awaken.lab.fragments;
 
 import com.android.internal.logging.nano.MetricsProto;
 
-public class ButtonSettings extends SettingsPreferenceFragment implements
-        Preference.OnPreferenceChangeListener{
+import android.app.Activity;
+import android.content.Context;
+import android.content.ContentResolver;
+import android.app.WallpaperManager;
+import android.content.Intent;
+import android.content.res.Resources;
+import android.hardware.fingerprint.FingerprintManager;
+import android.net.Uri;
+import android.os.Bundle;
+import androidx.preference.SwitchPreference;
+import androidx.preference.ListPreference;
+import androidx.preference.Preference;
+import androidx.preference.PreferenceCategory;
+import androidx.preference.PreferenceScreen;
+
+import android.provider.Settings;
+import com.android.settings.R;
+import com.android.settings.SettingsPreferenceFragment;
+
+public class LockScreenSettings extends SettingsPreferenceFragment implements
+        Preference.OnPreferenceChangeListener {
 
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
-        addPreferencesFromResource(R.xml.superior_lab_button);
+        addPreferencesFromResource(R.xml.awaken_lab_lockscreen);
 
+        ContentResolver resolver = getActivity().getContentResolver();
         final PreferenceScreen prefScreen = getPreferenceScreen();
+        Resources resources = getResources();
+
     }
 
     public boolean onPreferenceChange(Preference preference, Object newValue) {
@@ -57,7 +60,7 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
 
     @Override
     public int getMetricsCategory() {
-        return MetricsProto.MetricsEvent.SUPERIOR;
+        return MetricsProto.MetricsEvent.awaken;
     }
 
 }

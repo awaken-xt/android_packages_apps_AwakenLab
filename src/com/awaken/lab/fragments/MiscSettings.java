@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2022 SuperiorOS
+ * Copyright (C) 2022 awakenOS
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.superior.lab.fragments;
+package com.awaken.lab.fragments;
 
 import com.android.internal.logging.nano.MetricsProto;
 
@@ -49,7 +49,7 @@ public class MiscSettings extends SettingsPreferenceFragment implements
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
 
-        addPreferencesFromResource(R.xml.superior_lab_misc);
+        addPreferencesFromResource(R.xml.awaken_lab_misc);
 
     }
 
@@ -61,6 +61,6 @@ public class MiscSettings extends SettingsPreferenceFragment implements
 
     @Override
     public int getMetricsCategory() {
-        return MetricsProto.MetricsEvent.SUPERIOR;
+        return MetricsProto.MetricsEvent.awaken;
     }
 }
