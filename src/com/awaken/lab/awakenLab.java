@@ -39,7 +39,7 @@ public class awakenLab extends SettingsPreferenceFragment {
 
     @Override
     public int getMetricsCategory() {
-        return MetricsProto.MetricsEvent.Awaken;
+        return MetricsProto.MetricsEvent.AWAKEN;
     }
 
     public static void lockCurrentOrientation(Activity activity) {
