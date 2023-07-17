@@ -61,6 +61,6 @@ public class MiscSettings extends SettingsPreferenceFragment implements
 
     @Override
     public int getMetricsCategory() {
-        return MetricsProto.MetricsEvent.awaken;
+        return MetricsProto.MetricsEvent.AWAKEN;
     }
 }
