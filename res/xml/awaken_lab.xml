@@ -86,13 +86,13 @@
             settings:layout="@layout/awaken_dashboard_preference_top"
             android:icon="@drawable/ic_settings_powermenu"/>
 
-        <!-- Recents -->
+        <!-- Theme Room -->
         <Preference
-            android:key="recents_category"
-            android:title="@string/recents_title"
-            android:fragment="com.awaken.lab.fragments.RecentsSettings"
+            android:key="theme_category"
+            android:title="@string/theme_title"
+            android:fragment="com.awaken.lab.fragments.ThemesSettings"
             settings:layout="@layout/awaken_dashboard_preference_bottom"
-            android:icon="@drawable/ic_settings_recents"/>
+            android:icon="@drawable/ic_settings_theme"/>
 
         <!-- Notifications -->
         <Preference
