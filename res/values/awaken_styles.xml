@@ -31,7 +31,7 @@
     </style>
 
     <!-- Dashboard -->
-    <style name="awakenDashboardPreferenceSingle" parent="awakenPreferenceBase">
+    <style name="awakenDashboardPreferenceSingle" parent="awakenPreferenceSingle">
         <item name="android:layout_marginBottom">0dp</item>
     </style>
     <style name="awakenDashboardPreferenceTop" parent="awakenPreferenceTop">
@@ -56,6 +56,11 @@
     </style>
 
     <!-- General -->
+    <style name="awakenPreferenceSingle" parent="awakenPreferenceBase">
+        <item name="android:layout_marginBottom">4dp</item>
+        <item name="android:background">@drawable/awaken_preference_background_single</item>
+    </style>
+    
     <style name="awakenPreferenceBase">
         <item name="android:layout_marginStart">@dimen/awaken_pref_horizontal_padding</item>
         <item name="android:layout_marginEnd">@dimen/awaken_pref_horizontal_padding</item>

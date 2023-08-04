@@ -29,6 +29,14 @@
         android:title="@string/awaken_lab_title"
         android:layout="@layout/awaken_preference_category">
     </PreferenceCategory>
+    
+        <!-- Theme Room -->
+        <Preference
+            android:key="theme_category"
+            android:title="@string/theme_title"
+            android:fragment="com.awaken.lab.fragments.ThemesSettings"
+            settings:layout="@layout/awaken_dashboard_preference_single"
+            android:icon="@drawable/ic_settings_theme"/>
 
         <!-- Status Bar -->
         <Preference
@@ -54,20 +62,12 @@
             settings:layout="@layout/awaken_dashboard_preference_top"
             android:icon="@drawable/ic_settings_buttons"/>
 
-        <!-- Navigation Bar -->
-        <Preference
-            android:key="navigationbar_category"
-            android:title="@string/navbar_title" 
-            android:fragment="com.awaken.lab.fragments.NavbarSettings"
-            settings:layout="@layout/awaken_dashboard_preference_bottom"
-            android:icon="@drawable/ic_settings_navbar"/>
-
         <!-- Gestures -->
         <Preference
             android:key="gestures_category"
             android:title="@string/gestures_title" 
             android:fragment="com.awaken.lab.fragments.GestureSettings"
-            settings:layout="@layout/awaken_dashboard_preference_top"
+            settings:layout="@layout/awaken_dashboard_preference_bottom"
             android:icon="@drawable/ic_settings_sos_gestures"/>
 
         <!-- Lock Screen -->
@@ -75,7 +75,7 @@
             android:key="lockscreen_category"
             android:title="@string/lockscreen_title" 
             android:fragment="com.awaken.lab.fragments.LockScreenSettings"
-            settings:layout="@layout/awaken_dashboard_preference_bottom"
+            settings:layout="@layout/awaken_dashboard_preference_top"
             android:icon="@drawable/ic_settings_lockscreens"/>
 
         <!-- Power Menu -->
@@ -83,16 +83,8 @@
             android:key="powermenu__category"
             android:title="@string/powermenu_title" 
             android:fragment="com.awaken.lab.fragments.PowerMenuSettings"
-            settings:layout="@layout/awaken_dashboard_preference_top"
-            android:icon="@drawable/ic_settings_powermenu"/>
-
-        <!-- Theme Room -->
-        <Preference
-            android:key="theme_category"
-            android:title="@string/theme_title"
-            android:fragment="com.awaken.lab.fragments.ThemesSettings"
             settings:layout="@layout/awaken_dashboard_preference_bottom"
-            android:icon="@drawable/ic_settings_theme"/>
+            android:icon="@drawable/ic_settings_powermenu"/>
 
         <!-- Notifications -->
         <Preference
