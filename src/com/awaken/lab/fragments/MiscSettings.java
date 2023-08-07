@@ -41,21 +41,32 @@ import java.util.Arrays;
 import java.util.HashSet;
 
 import com.android.settings.SettingsPreferenceFragment;
+import com.android.internal.util.awaken.systemUtils;
 
 public class MiscSettings extends SettingsPreferenceFragment implements
         OnPreferenceChangeListener {
+    private static final String SETTINGS_HEADER_IMAGE_RANDOM = "settings_header_image_random";
+
+    private Preference mSettingsHeaderImageRandom;
 
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
 
         addPreferencesFromResource(R.xml.awaken_lab_misc);
-
+        
+        mSettingsHeaderImageRandom = findPreference(SETTINGS_HEADER_IMAGE_RANDOM);
+        mSettingsHeaderImageRandom.setOnPreferenceChangeListener(this);
     }
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object objValue) {
-
+    	Context mContext = getActivity().getApplicationContext();
+	ContentResolver resolver = mContext.getContentResolver();
+	if (preference == mSettingsHeaderImageRandom) {
+            systemUtils.showSettingsRestartDialog(getContext());
+            return true;
+          }  
         return false;
     }
 

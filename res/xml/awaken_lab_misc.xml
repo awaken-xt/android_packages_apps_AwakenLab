@@ -21,6 +21,12 @@
     <PreferenceCategory
         android:title="@string/general_category">
         
+        <com.superior.support.preferences.SystemSettingSwitchPreference
+          	android:key="settings_header_image_random"
+          	android:title="@string/settings_header_image_random_title"
+          	android:summary="@string/settings_header_image_random_summary"
+          	android:defaultValue="true" />
+        
         <com.awaken.support.preferences.SecureSettingSwitchPreference
             android:key="window_ignore_secure"
             android:title="@string/ignore_window_secure_title"

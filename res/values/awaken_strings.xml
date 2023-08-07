@@ -327,4 +327,9 @@
     <string name="qs_header_image_alpha_title">Opacity</string>
     <string name="qs_header_image_padding_side_title">Side padding</string>
     <string name="qs_header_image_padding_top_title">Top padding</string>
+    
+    <!-- Settings Header -->
+    <string name="settings_header_image_title">Settings header image</string>
+    <string name="settings_header_image_random_title">Random Settings header image</string>
+    <string name="settings_header_image_random_summary">Enable random aesthetic settings dashboard banner/header images</string>
 </resources>
