@@ -47,13 +47,11 @@
           android:summary="%s"
           android:defaultValue="0" />
 
-          <com.awaken.support.preferences.SystemSettingSeekBarPreference
-               android:key="qs_header_image"
-               android:title="@string/qs_header_image_title"
-               android:defaultValue="0"
-               settings:interval="1"
-               android:max="36"
-               android:min="0" />
+     <Preference
+          android:key="qs_header_image"
+          android:fragment="com.awaken.lab.fragments.qs.QsHeaderImageSettings"
+          android:title="@string/qs_header_image_title"
+          android:summary="@string/qs_header_image_summary" />
     </PreferenceCategory>
 
     <PreferenceCategory
