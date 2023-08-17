@@ -32,10 +32,10 @@ import com.android.settings.SettingsPreferenceFragment;
 
 import com.android.settingslib.widget.LayoutPreference;
 
-import com.awaken.support.preferences.SystemSettingSeekBarPreference;
+import com.awaken.lab.preferences.CustomSeekBarPreference;
 import com.awaken.support.preferences.SystemSettingSwitchPreference;
 
-public class QsLayoutSettings extends SettingsPreferenceFragment
+public class QsTileLayoutSettings extends SettingsPreferenceFragment
         implements Preference.OnPreferenceChangeListener {
 
     private static final String KEY_QS_HIDE_LABEL = "qs_tile_label_hide";
@@ -47,9 +47,9 @@ public class QsLayoutSettings extends SettingsPreferenceFragment
 
     private Context mContext;
 
-    private SystemSettingSeekBarPreference mQsColumns;
-    private SystemSettingSeekBarPreference mQsRows;
-    private SystemSettingSeekBarPreference mQqsRows;
+    private CustomSeekBarPreference mQsColumns;
+    private CustomSeekBarPreference mQsRows;
+    private CustomSeekBarPreference mQqsRows;
 
     private Button mApplyChange;
 
@@ -61,20 +61,20 @@ public class QsLayoutSettings extends SettingsPreferenceFragment
     @Override
     public void onCreate(Bundle savedInstance) {
         super.onCreate(savedInstance);
-        addPreferencesFromResource(R.xml.awaken_lab_quicksettings);
+        addPreferencesFromResource(R.xml.qs_tile_layout);
     }
 
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        mQsColumns = (SystemSettingSeekBarPreference) findPreference(KEY_QS_COLUMN_PORTRAIT);
+        mQsColumns = (CustomSeekBarPreference) findPreference(KEY_QS_COLUMN_PORTRAIT);
         mQsColumns.setOnPreferenceChangeListener(this);
 
-        mQsRows = (SystemSettingSeekBarPreference) findPreference(KEY_QS_ROW_PORTRAIT);
+        mQsRows = (CustomSeekBarPreference) findPreference(KEY_QS_ROW_PORTRAIT);
         mQsRows.setOnPreferenceChangeListener(this);
 
-        mQqsRows = (SystemSettingSeekBarPreference) findPreference(KEY_QQS_ROW_PORTRAIT);
+        mQqsRows = (CustomSeekBarPreference) findPreference(KEY_QQS_ROW_PORTRAIT);
         mQqsRows.setOnPreferenceChangeListener(this);
 
         mContext = getContext();
