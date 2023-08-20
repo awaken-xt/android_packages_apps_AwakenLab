@@ -33,6 +33,7 @@ import com.android.settings.SettingsPreferenceFragment;
 import com.android.settingslib.widget.LayoutPreference;
 
 import com.awaken.lab.preferences.CustomSeekBarPreference;
+import com.awaken.support.preferences.SystemSettingSeekBarPreference;
 import com.awaken.support.preferences.SystemSettingSwitchPreference;
 
 public class QsTileLayoutSettings extends SettingsPreferenceFragment
@@ -44,12 +45,17 @@ public class QsTileLayoutSettings extends SettingsPreferenceFragment
     private static final String KEY_QS_ROW_PORTRAIT = "qs_layout_rows";
     private static final String KEY_QQS_ROW_PORTRAIT = "qqs_layout_rows";
     private static final String KEY_APPLY_CHANGE_BUTTON = "apply_change_button";
+    private static final String KEY_QS_LABEL_SIZE = "qs_tile_label_size";
+    private static final String KEY_QS_SECONDARY_LABEL_SIZE = "qs_tile_secondary_label_size";
 
     private Context mContext;
 
     private CustomSeekBarPreference mQsColumns;
     private CustomSeekBarPreference mQsRows;
     private CustomSeekBarPreference mQqsRows;
+
+    private SystemSettingSeekBarPreference mSize;
+    private SystemSettingSeekBarPreference mSizeSec;
 
     private Button mApplyChange;
 
@@ -118,6 +124,12 @@ public class QsTileLayoutSettings extends SettingsPreferenceFragment
 
         mVertical = (SystemSettingSwitchPreference) findPreference(KEY_QS_VERTICAL_LAYOUT);
         mVertical.setEnabled(!hideLabel);
+
+        mSize = (SystemSettingSeekBarPreference) findPreference(KEY_QS_LABEL_SIZE);
+        mSize.setEnabled(!hideLabel);
+
+        mSizeSec = (SystemSettingSeekBarPreference) findPreference(KEY_QS_SECONDARY_LABEL_SIZE);
+        mSizeSec.setEnabled(!hideLabel);
     }
 
     @Override
@@ -125,6 +137,8 @@ public class QsTileLayoutSettings extends SettingsPreferenceFragment
         if (preference == mHide) {
             boolean hideLabel = (Boolean) newValue;
             mVertical.setEnabled(!hideLabel);
+            mSize.setEnabled(!hideLabel);
+            mSizeSec.setEnabled(!hideLabel);
         } else if (preference == mQsColumns) {
             int qs_columns = Integer.parseInt(newValue.toString());
             mApplyChange.setEnabled(
