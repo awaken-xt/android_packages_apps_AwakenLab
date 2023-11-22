@@ -25,6 +25,7 @@
     <string name="statusbar_icons">Icons</string>
     <string name="qs_show_brightness_slider_title">Brightness slider</string>
     <string name="clocksettings_category_title">Clock Customizations</string>
+    <string name="fingerprint_category">Fingerprint</string>
 
     <!-- General strings -->
     <string name="ok">OK</string>
@@ -205,4 +206,8 @@
     <!-- Custom Navigation bar -->
     <string name="theme_customization_navbar_title">Navbar style</string>
     <string name="theme_customization_navbar_summary">Set custom navigation bar style</string>
+
+    <!-- Fingerprint Ripple Effect -->
+    <string name="enable_fingerprint_ripple_effect_title">Ripple effect</string>
+    <string name="enable_fingerprint_ripple_effect_summary">Show ripple effect on unlock with fingerprint</string>
 </resources>
