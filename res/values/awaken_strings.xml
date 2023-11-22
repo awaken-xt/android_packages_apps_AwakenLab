@@ -23,6 +23,7 @@
     <string name="volume_buttons_category">Volume Buttons</string>
     <string name="power_button_category">Power Button</string>
     <string name="statusbar_icons">Icons</string>
+    <string name="fingerprint_category">Fingerprint</string>
 
     <!-- General strings -->
     <string name="ok">OK</string>
@@ -172,4 +173,8 @@
     <!-- Custom Navigation bar -->
     <string name="theme_customization_navbar_title">Navbar style</string>
     <string name="theme_customization_navbar_summary">Set custom navigation bar style</string>
+
+    <!-- Fingerprint Ripple Effect -->
+    <string name="enable_fingerprint_ripple_effect_title">Ripple effect</string>
+    <string name="enable_fingerprint_ripple_effect_summary">Show ripple effect on unlock with fingerprint</string>
 </resources>
