@@ -10,6 +10,15 @@
     
     <PreferenceCategory
         android:title="@string/general_category">
+
+
+        <!-- Network Traffic -->
+        <Preference
+            android:key="network_traffic_state"
+            android:title="@string/network_traffic_state_title"
+            android:summary="@string/network_traffic_state_summary"
+            android:fragment="com.awaken.lab.fragments.NetworkTrafficSettings"
+            android:defaultValue="false" />
         
         <Preference
             android:key="icon_manager"
