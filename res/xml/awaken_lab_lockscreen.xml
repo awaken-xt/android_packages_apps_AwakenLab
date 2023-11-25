@@ -10,6 +10,41 @@
     <PreferenceCategory
         android:key="lockscreen_ui_finterprint_category"
         android:title="@string/fingerprint_category">
+        
+        <PreferenceCategory
+        android:title="@string/media_category">
+
+        <com.awaken.support.preferences.SystemSettingSwitchPreference
+            android:key="lockscreen_media_metadata"
+            android:title="@string/lockscreen_album_media_art_toggle"
+            android:summary="@string/lockscreen_album_media_art_summary"
+            android:defaultValue="false" />
+
+        <com.awaken.support.preferences.SystemSettingListPreference
+            android:key="lockscreen_albumart_filter"
+            android:title="@string/lockscreen_albumart_filter_title"
+            android:entries="@array/lockscreen_albumart_filter_entries"
+            android:entryValues="@array/lockscreen_albumart_filter_values"
+            android:dependency="lockscreen_media_metadata"
+            android:defaultValue="0" />
+
+        <com.awaken.support.preferences.CustomSystemSeekBarPreference
+            android:key="ls_media_filter_blur_radius"
+            android:title="@string/lockscreen_albumart_filter_blur_radius_title"
+            android:dependency="lockscreen_media_metadata"
+            android:defaultValue="125"
+            android:max="125"
+            settings:min="2"/>
+
+        <com.awaken.support.preferences.CustomSystemSeekBarPreference
+            android:key="ls_media_artwork_fade_percent"
+            android:title="@string/ls_media_artwork_fade_percent_title"
+            android:dependency="lockscreen_media_metadata"
+            android:defaultValue="30"
+            android:max="80"
+            settings:min="1" />
+
+    </PreferenceCategory>
 
     <com.awaken.support.preferences.SystemSettingSwitchPreference
         android:key="enable_ripple_effect"

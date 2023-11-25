@@ -25,6 +25,7 @@
     <string name="statusbar_icons">Icons</string>
     <string name="qs_show_brightness_slider_title">Brightness slider</string>
     <string name="clocksettings_category_title">Clock Customizations</string>
+    <string name="media_category">Media</string>
     <string name="fingerprint_category">Fingerprint</string>
 
     <!-- General strings -->
